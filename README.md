@@ -32,36 +32,36 @@ Nothing much for now. Just this:
 
 ## Screenshots
 ### Homescreen
-![homescreen_default](/assets/desktop_blank.png)
-![homescreen_showcase](/assets/desktop_showcase.png)
+![homescreen_default](/assets/images/desktop_blank.png)
+![homescreen_showcase](/assets/images/desktop_showcase.png)
 
 ### Waybar
-![waybar](/assets/waybar.png)
+![waybar](/assets/images/waybar.png)
 
 ### App Launcher (Artefacts)
 The main Rofi launcher for apps.
-![app-launcher](/assets/app_launcher.png)
+![app-launcher](/assets/images/app_launcher.png)
 
 ### Power Menu
 The Rofi launcher for power menu with options to lock, suspend, shut down, restart, etc.
-![power-menu](/assets/powermenu.png)
+![power-menu](/assets/images/powermenu.png)
 
 ### Command Palette (`Kigusai Central Pagoda`)
 This is a custom script that lets you choose from a variety of tasks like taking a screenshot, displaying a random message, restarting services like waybar, hyprland, etc. on reload, and so on.
-![command-palette](/assets/command_palette.png)
+![command-palette](/assets/images/command_palette.png)
 
 ### Project Launcher (Pagodas)
 Choose from a list of Pagodas (Projects) to enter, and it will create a new tmux session with two panes. By default, it scans all directories inside `~/Projects/`, but you can change that manually in `~/dotfiles/scripts/.scripts/zsh/project_launcher.sh`.
-![project-launcher](project_launcher.png)
+![project-launcher](/assets/images/project_launcher.png)
 
 ### Notifications
 I am using Dunst to display notifications.
 
 #### Low Urgency (Example from random quote displayer, available to run in Command Palette, and also through a keybinding (see bindings below))
-![low-notification](/assets/low_urgency/notif.png)
+![low-notification](/assets/images/low_urgency/notif.png)
 
 #### Normal Urgency (Example from taking a screenshot)
-![normal-notification](/assets/normal_urgency_notif.png)
+![normal-notification](/assets/images/normal_urgency_notif.png)
 
 ## Key Bindings
 I have the following keybindings on this setup:
