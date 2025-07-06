@@ -28,6 +28,9 @@ alias cd="z"
 # Judge Alias
 alias judge="python3 ~/Coding/python/judge/index.py"
 
+# Alias for GitHub Opener script
+alias gop="~/.scripts/zsh/gh_open.sh"
+
 # Scrcpy Alias
 alias scopen="scrcpy --no-audio"
 
@@ -73,15 +76,6 @@ alias glint="source ~/Coding/python/glint/glint/bin/activate && python3 ~/Coding
 
 # FILE OPENER (NEOVIM) ######################################
 bindkey -s '^N' 'source ~/.scripts/zsh/nvim_opener.sh\n'
-
-
-# ################ Environment Variables #####################
-# export XDG_CURRENT_DESKTOP=Hyprland
-# export XDG_SESSION_TYPE=wayland
-# export GDK_BACKEND=wayland,x11
-# export MOZ_ENABLE_WAYLAND=1
-# export QT_QPA_PLATFORM=wayland
-
 
 
 eval "$(zoxide init zsh)"
