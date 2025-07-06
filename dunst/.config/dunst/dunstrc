@@ -1,0 +1,67 @@
+[global]
+    monitor = 0
+    follow = mouse
+    width = (0, 300)
+    height = (0, 300)
+    origin = top-right
+    offset = (25, 50)
+    scale = 0
+    notification_limit = 5
+    transparency = 0
+    frame_width = 0
+    separator_height = 0
+    padding = 25
+    horizontal_padding = 16
+    text_icon_padding = 8
+    frame_color = "#5e7352"
+    separator_color = frame
+    gap_size = 10
+    sort = yes
+    markup = full
+    font = GeistMono Nerd Font 9
+    format = "<b><big>%s</big></b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    ellipsize = end
+    ignore_newline = no
+    show_indicators = yes
+    show_age_threshold = 60
+    stack_duplicates = true
+    hide_duplicate_count = false
+    corner_radius = 10
+    corners = all
+    progress_bar = true
+    progress_bar_height = 4
+    progress_bar_min_width = 120
+    progress_bar_max_width = 280
+    icon_corner_radius = 6
+    icon_corners = all
+    icon_position = left
+    icon_theme = Adwaita
+    min_icon_size = 32
+    max_icon_size = 128
+    enable_recursive_icon_lookup = true
+    history_length = 20
+    sticky_history = yes
+    mouse_left_click = close_current
+    mouse_right_click = do_action
+
+[urgency_low]
+    background = "#2f383ecc"
+    foreground = "#d3c6aa"
+    timeout = 5
+    default_icon = dialog-information
+
+[urgency_normal]
+    background = "#5e7352cc"
+    foreground = "#dce2c8"
+    timeout = 6
+    default_icon = dialog-information
+
+[urgency_critical]
+    background = "#8c3d3dcc"
+    foreground = "#fdf6e3"
+    frame_color = "#b83939"
+    timeout = 0
+    default_icon = dialog-warning
+

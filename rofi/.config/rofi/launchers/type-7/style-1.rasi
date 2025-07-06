@@ -1,0 +1,305 @@
+///////////////////////////////
+///////////////////////////////
+//
+// ██████╗  ██████╗ ███████╗██╗
+// ██╔══██╗██╔═══██╗██╔════╝██║
+// ██████╔╝██║   ██║█████╗  ██║
+// ██╔══██╗██║   ██║██╔══╝  ██║
+// ██║  ██║╚██████╔╝██║     ██║
+// ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝
+//
+///////////////////////////////
+// Rofi Config for AetherOS ///
+///////////////////////////////
+
+
+/*****----- Configuration -----*****/
+configuration {
+	modi:                       "drun";
+  // show-icons:                 true;
+  // display-drun:               "";
+  display-drun: "Apps";
+  // display-run:                "";
+  // display-filebrowser:        "";
+  // display-window:             "";
+	drun-display-format:        "{name}";
+}
+
+* {
+    font: "GeistMono Nerd Font 12";
+    text-color: #d3c6aa;
+    background-color: rgba(43, 51, 57, 0.6);  // Everforest bg0 with transparency
+    border: 0px;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    transparency: "real";
+    blur: true;
+    padding: 20px;
+    width: 700px;
+    height: 450px;
+    border-radius: 20px;
+}
+
+mainbox {
+    padding: 10px;
+    children: [inputbar, listview];
+    spacing: 15px;
+    border-radius: 15px;
+}
+
+inputbar {
+    children: [entry];
+    background-color: rgba(67, 76, 84, 0.8);  // Everforest bg2-ish
+    border-radius: 7px;
+    padding: 6px 12px;
+}
+
+entry {
+    expand: true;
+    text-color: #d3c6aa;
+    cursor: text;
+    background-color: transparent;
+    placeholder: "Artefacts";
+    placeholder-color: #859289;
+}
+
+listview {
+    lines: 10;
+    dynamic: true;
+    fixed-height: false;
+    scrollbar: false;
+    padding: 0;
+    border-radius: 10px;
+    spacing: 6px;
+}
+
+element {
+    padding: 15px;
+    border-radius: 4px;
+    background-color: transparent;
+    horizontal-align: 0.5;
+    spacing: 10px;
+    children: [element-icon, element-text];
+}
+
+element-text {
+    background-color: transparent;
+    vertical-align: 0.5;
+}
+
+element selected {
+    background-color: rgba(167, 192, 128, 0.2);  // Greenish highlight
+    text-color: #d3c6aa;
+}
+
+// element {
+//     padding: 6px 12px;
+//     background-color: transparent;
+//     text-color: #d3c6aa;
+// }
+//
+element-icon {
+    size: 22px;
+    margin: 5px;
+    margin-right: 30px;
+    vertical-align: 0.5;
+}
+//
+// element selected {
+//     background-color: rgba(167, 192, 128, 0.15);  // Gentle green hover
+//     text-color: #d3c6aa;
+//     border-radius: 6px;
+// }
+
+
+// /*****----- Global Properties -----*****/
+// * {
+//     font:                        "JetBrains Mono Nerd Font 10";
+//     background:                  #11092D;
+//     background-alt:              #281657;
+//     foreground:                  #FFFFFF;
+//     selected:                    #DF5296;
+//     active:                      #6E77FF;
+//     urgent:                      #8E3596;
+// }
+//
+// /*****----- Main Window -----*****/
+// window {
+//     /* properties for window widget */
+//     transparency:                "real";
+//     location:                    center;
+//     anchor:                      center;
+//     fullscreen:                  false;
+//     width:                       700px;
+//     x-offset:                    0px;
+//     y-offset:                    0px;
+//
+//     /* properties for all widgets */
+//     enabled:                     true;
+//     border-radius:               20px;
+//     cursor:                      "default";
+//     background-color:            @background;
+// }
+//
+// /*****----- Main Box -----*****/
+// mainbox {
+//     enabled:                     true;
+//     spacing:                     0px;
+//     background-color:            transparent;
+//     orientation:                 vertical;
+//     children:                    [ "inputbar", "listbox" ];
+// }
+//
+// listbox {
+//     spacing:                     20px;
+//     padding:                     20px;
+//     background-color:            transparent;
+//     orientation:                 vertical;
+//     children:                    [ "message", "listview" ];
+// }
+//
+// /*****----- Inputbar -----*****/
+// inputbar {
+//     enabled:                     true;
+//     spacing:                     10px;
+//     padding:                     80px 60px;
+//     background-color:            transparent;
+//     background-image:            url("~/.config/rofi/images/a.png", width);
+//     text-color:                  @foreground;
+//     orientation:                 horizontal;
+//     children:                    [ "textbox-prompt-colon", "entry", "dummy", "mode-switcher" ];
+// }
+// textbox-prompt-colon {
+//     enabled:                     true;
+//     expand:                      false;
+//     str:                         "";
+//     padding:                     12px 15px;
+//     border-radius:               100%;
+//     background-color:            @background-alt;
+//     text-color:                  inherit;
+// }
+// entry {
+//     enabled:                     true;
+//     expand:                      false;
+//     width:                       250px;
+//     padding:                     12px 16px;
+//     border-radius:               100%;
+//     background-color:            @background-alt;
+//     text-color:                  inherit;
+//     cursor:                      text;
+//     placeholder:                 "Search";
+//     placeholder-color:           inherit;
+// }
+// dummy {
+//     expand:                      true;
+//     background-color:            transparent;
+// }
+//
+// /*****----- Mode Switcher -----*****/
+// mode-switcher{
+//     enabled:                     true;
+//     spacing:                     10px;
+//     background-color:            transparent;
+//     text-color:                  @foreground;
+// }
+// button {
+//     width:                       45px;
+//     padding:                     12px;
+//     border-radius:               100%;
+//     background-color:            @background-alt;
+//     text-color:                  inherit;
+//     cursor:                      pointer;
+// }
+// button selected {
+//     background-color:            @selected;
+//     text-color:                  @foreground;
+// }
+//
+// /*****----- Listview -----*****/
+// listview {
+//     enabled:                     true;
+//     columns:                     1;
+//     lines:                       7;
+//     cycle:                       true;
+//     dynamic:                     true;
+//     scrollbar:                   false;
+//     layout:                      vertical;
+//     reverse:                     false;
+//     fixed-height:                true;
+//     fixed-columns:               true;
+//     
+//     spacing:                     10px;
+//     background-color:            transparent;
+//     text-color:                  @foreground;
+//     cursor:                      "default";
+// }
+//
+// /*****----- Elements -----*****/
+// element {
+//     enabled:                     true;
+//     spacing:                     10px;
+//     padding:                     4px;
+//     border-radius:               100%;
+//     background-color:            transparent;
+//     text-color:                  @foreground;
+//     cursor:                      pointer;
+// }
+// element normal.normal {
+//     background-color:            inherit;
+//     text-color:                  inherit;
+// }
+// element normal.urgent {
+//     background-color:            @urgent;
+//     text-color:                  @foreground;
+// }
+// element normal.active {
+//     background-color:            @active;
+//     text-color:                  @foreground;
+// }
+// element selected.normal {
+//     background-color:            @selected;
+//     text-color:                  @foreground;
+// }
+// element selected.urgent {
+//     background-color:            @urgent;
+//     text-color:                  @foreground;
+// }
+// element selected.active {
+//     background-color:            @urgent;
+//     text-color:                  @foreground;
+// }
+// element-icon {
+//     background-color:            transparent;
+//     text-color:                  inherit;
+//     size:                        32px;
+//     cursor:                      inherit;
+// }
+// element-text {
+//     background-color:            transparent;
+//     text-color:                  inherit;
+//     cursor:                      inherit;
+//     vertical-align:              0.5;
+//     horizontal-align:            0.0;
+// }
+//
+// /*****----- Message -----*****/
+// message {
+//     background-color:            transparent;
+// }
+// textbox {
+//     padding:                     12px;
+//     border-radius:               100%;
+//     background-color:            @background-alt;
+//     text-color:                  @foreground;
+//     vertical-align:              0.5;
+//     horizontal-align:            0.0;
+// }
+// error-message {
+//     padding:                     12px;
+//     border-radius:               20px;
+//     background-color:            @background;
+//     text-color:                  @foreground;
+// }

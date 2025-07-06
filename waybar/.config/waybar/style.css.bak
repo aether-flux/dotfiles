@@ -1,0 +1,178 @@
+* {
+    font-family: "Literata", "Geist Mono Nerd Font", monospace;
+    font-size: 13px;
+}
+
+/* Waybar */
+#waybar {
+    padding: 0 8px;
+    background: transparent;
+}
+
+window#waybar {
+    padding: 0;
+}
+
+#tooltip {
+    background: rgba(59, 45, 38, 0.9); /* leathery brown */
+    color: #efeee9;
+    border: 1px solid #c2a35e; /* brass edge */
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+
+
+
+/* LEFT MODULES */
+
+/* Custom apps */
+#custom-apps {
+    border: 2px solid #efeee9;
+    margin-left: 10px;
+    padding-right: 5px;
+    min-width: 40px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+#custom-apps:hover {
+    background: rgba(46, 35, 17, 0.533);
+}
+
+/* Active window */
+#window {
+    background: #efeee9;
+    color: #3d2f22;
+    padding: 0 20px;
+    border-radius: 100px;
+    margin-left: 10px;
+}
+
+
+
+/* CENTER MODULES */
+
+/* Workspaces */
+#workspaces {
+    background: #efeee9;
+    color: #3d2f22;
+    padding: 0 10px;
+    border-radius: 200px;
+    transition: all 0.3s ease;
+}
+#workspaces button {
+    color: rgba(195,154,28, 128);
+}
+
+#workspaces button.active {
+    color: #641e1e;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+
+
+/* RIGHT MODULES */
+
+/* Clock */
+#clock {
+    background: #efeee9;
+    color: #3d2f22;
+    padding: 0 20px;
+    border-radius: 200px;
+}
+
+/* CPU Usage */
+#cpu {
+    border: 2px solid #efeee9;
+    border-radius: 200px;
+    padding: 0 20px;
+}
+
+/* Memory Usage */
+#memory {
+    border: 2px solid #efeee9;
+    border-radius: 200px;
+    padding: 0 20px;
+}
+
+/* Audio Controls */
+#custom-audio {
+  border: 2px solid #efeee9;
+  border-radius: 200px;
+  padding: 0 20px;
+}
+
+/* Brightness Controls */
+#custom-brightness {
+  border: 2px solid #efeee9;
+  border-radius: 200px;
+  padding: 0 20px;
+}
+
+/* Wifi Network */
+#network {
+    background: #efeee9;
+    color: #3d2f22;
+    border-radius: 200px;
+    padding: 0 20px;
+}
+
+/* Battery */
+#battery {
+    border: 2px solid #efeee9;
+    border-radius: 200px;
+    padding: 0 20px;
+}
+
+/* Power Menu */
+#custom-power {
+    background: #efeee9;
+    color: #3d2f22;
+    padding: 0 20px;
+    margin-right: 10px;
+    border-radius: 200px;
+}
+
+
+/**/
+
+
+
+#window, #workspaces, #clock, #network, #custom-power {
+    background: #efeee9;
+    color: #3b2d26;
+    border-radius: 20px;
+    border: 1.5px solid #c2a35e;
+    padding: 0 16px;
+    box-shadow: 0 0 6px rgba(194, 163, 94, 0.3);
+}
+
+#clock {
+  font-family: "IM Fell English SC", "Literata", "Geist Mono Nerd Font", monospace;
+  font-size: 22px;
+}
+
+#custom-apps, #cpu, #memory, #custom-audio, #custom-brightness, #battery {
+    border: 1.5px solid #e3bf6f;
+    color: #e3bf6f;
+    border-radius: 200px;
+    padding: 0 16px;
+    background: rgba(59, 45, 38, 0.5);
+    transition: all 0.3s ease;
+}
+
+#custom-apps:hover {
+    background: rgba(194, 163, 94, 0.2);
+}
+
+#workspaces button {
+    color: #5a4637;
+}
+
+#workspaces button.active {
+    color: #8c3d3d;
+    background: rgba(194, 163, 94, 0.2);
+    border-radius: 100px;
+    margin: 4px;
+}

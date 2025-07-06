@@ -1,0 +1,100 @@
+
+
+// ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗ 
+// ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+// ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝
+// ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+// ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║
+//  ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+                                                   
+
+                                                                   
+///////////////////////////////
+// /////  Waybar Config   /////
+// /////  For AetherOS    /////
+///////////////////////////////
+
+
+{
+    "layer": "top",
+    "height": 50,
+    "spacing": 10,
+    "modules-left": ["custom/apps", "hyprland/window"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["clock", "custom/audio", "custom/brightness", "network", "battery", "custom/power"],
+
+    "custom/apps": {
+        //	"format": "",
+        "format": "",
+        // "format": "<img src='/home/aether/.config/waybar/icons/endeavouros.png' width=32 height=32 />",
+        "tooltip-format": "Artifacts",
+        "on-click": "/home/aether/.config/rofi/launchers/type-6/launcher.sh"
+    },
+
+    "custom/power": {
+        "format": "",
+        "tooltip-format": "Eternal Slumber",
+        "on-click": "/home/aether/.config/rofi/powermenu/type-6/powermenu.sh"
+    },
+
+    "hyprland/window": {
+        "max-length": 30
+    },
+
+    "hyprland/workspaces": {
+        "format": "",
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    "custom/audio": {
+      "exec": "~/.config/waybar/scripts/vol_status.sh",
+      "interval": 1,
+      "format": "{}",
+      "return-type": "plain",
+      "tooltip": false,
+      "on-right-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+      "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+      "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+      "on-click": "pavucontrol"
+    },
+
+    "custom/brightness": {
+      "exec": "~/.config/waybar/scripts/brightness_stat.sh",
+      "format": "{}",
+      "return-type": "plain",
+      "tooltip": false,
+      "interval": 1,
+      "on-scroll-up": "brightnessctl set +5%",
+      "on-scroll-down": "brightnessctl set 5%-"
+
+    },
+
+    "battery": {
+        "states": {
+            "good": 80,
+            "warning": 30,
+            "bad": 15
+        },
+        "format": "{capacity}% ",
+        "format-full": "{capacity}% ",
+        "format-charging": "{capacity}% "
+    },
+
+    "clock": {
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": "{}% "
+    },
+
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected "
+    }
+}
