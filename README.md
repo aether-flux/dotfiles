@@ -58,7 +58,7 @@ Choose from a list of Pagodas (Projects) to enter, and it will create a new tmux
 I am using Dunst to display notifications.
 
 #### Low Urgency (Example from random quote displayer, available to run in Command Palette, and also through a keybinding (see bindings below))
-![low-notification](/assets/images/low_urgency/notif.png)
+![low-notification](/assets/images/low_urgency_notif.png)
 
 #### Normal Urgency (Example from taking a screenshot)
 ![normal-notification](/assets/images/normal_urgency_notif.png)
