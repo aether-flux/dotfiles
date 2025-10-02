@@ -1,3 +1,5 @@
+@import url("/home/aether/.cache/wal/colors-waybar.css");
+
 * {
     border: none;
     border-radius: 0;
@@ -18,28 +20,24 @@ window#waybar.hidden {
     border-radius: 6px;
     margin-right: 8px;
     margin-top: 0px;
-    background-color: #2b3339;
+    /* background-color: #2b3339; */
+    background-color: @background;
 }
 
 #workspaces button {
     background: transparent;
     padding: 5px;
     font-size: 18px;
-    color: #d3c6aa;
+    color: @foreground;
 }
 
 #workspaces button:hover {
-    background: #2b3339;
+    background: @color8;
     border-radius: 4px;
 }
 
-/* #workspaces button.active, */
-/* #workspaces button.active:hover { */
-/*     background: #5C8374; */
-/*     color: #0d1117; */
-/* } */
 #workspaces button.active {
-  color: #78c2a5;
+  color: @color6;
 }
 
 #window {
@@ -48,8 +46,8 @@ window#waybar.hidden {
     margin-right: 8px;
     border-radius: 6px;
     transition: none;
-    color: #d3c6aa;
-    background: #2b3339;
+    color: @foreground;
+    background: @background;
 }
 
 #keyboard-state {
@@ -58,8 +56,8 @@ window#waybar.hidden {
     margin-right: 8px;
     border-radius: 6px;
     transition: none;
-    color: #d3c6aa;
-    background: #2b3339;
+    color: @foreground;
+    background: @background;
 }
 
 #custom-pacman {
@@ -67,8 +65,8 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 6px;
     transition: none;
-    color: #d3c6aa;
-    background: #2b3339;
+    color: @foreground;
+    background: @background;
 }
 
 /* #custom-mail { */
@@ -85,8 +83,8 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 6px;
     transition: none;
-    color: #d3c6aa;
-    background: #2b3339;
+    color: @foreground;
+    background: @background;
 }
 
 #pulseaudio {
@@ -95,13 +93,13 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 6px;
     transition: none;
-    color: #d3c6aa;
-    background: #2b3339;
+    color: @foreground;
+    background: @background;
 }
 
 #pulseaudio.muted {
-    background-color: #a7c080;
-    color: #2a5c45;
+    background-color: @color4;
+    color: @foreground;
 }
 
 #network {
@@ -110,9 +108,19 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 6px;
     transition: none;
-    color: #d3c6aa;
-    background: #2b3339;
+    color: @foreground;
+    background: @background;
 }
+
+/* #custom-notification { */
+/*     margin-right: 8px; */
+/*     padding-left: 16px; */
+/*     padding-right: 16px; */
+/*     border-radius: 6px; */
+/*     transition: none; */
+/*     color: #d3c6aa; */
+/*     background: #2b3339; */
+/* } */
 
 #backlight {
     margin-right: 8px;
@@ -120,8 +128,8 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 6px;
     transition: none;
-    color: #d3c6aa;
-    background: #2b3339;
+    color: @foreground;
+    background: @background;
 }
 
 #battery {
@@ -130,12 +138,12 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 6px;
     transition: none;
-    color: #d3c6aa;
-    background: #2b3339;
+    color: @foreground;
+    background: @background;
 }
 
 #battery.charging {
-    color: #2a5c45;
+    color: @color1;
     background-color: #a7c080;
 }
 
@@ -160,7 +168,7 @@ window#waybar.hidden {
     border-radius: 6px;
     transition: none;
     color: #ffffff;
-    background: #2b3339;
+    background: @background;
 }
 
 @keyframes blink {

@@ -190,9 +190,11 @@ add-zsh-hook precmd fix_cursor_shape
   # Separator between same-color segments on the right.
   typeset -g POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR='\uE0B7'
   # Separator between different-color segments on the left.
-  typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
+  # typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
+  # typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
   # Separator between different-color segments on the right.
-  typeset -g POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=''
+  # typeset -g POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=''
+  # typeset -g POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR='󰹞'
   # To remove a separator between two segments, add "_joined" to the second segment name.
   # For example: POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(os_icon context_joined)
 
@@ -212,7 +214,7 @@ add-zsh-hook precmd fix_cursor_shape
   typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=$SAND
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=$COAL
   # Custom icon.
-  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='🕰'
+  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='🕰 '
 
   ################################[ prompt_char: prompt symbol ]################################
   # Transparent background.

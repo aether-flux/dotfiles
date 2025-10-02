@@ -24,7 +24,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "hyprland/window", "keyboard-state", "custom/pacman"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "backlight", "network", "battery"],
+    "modules-right": ["pulseaudio", "backlight", "network", "custom/notification", "battery"],
 
 
     //***************************
@@ -34,6 +34,18 @@
     "hyprland/workspaces": {
         "persistent-workspaces": {
             "*": 5
+        },
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "active": " ",
+          "urgent": " "
         }
     },
 
@@ -67,23 +79,12 @@
         "tooltip": false
     },
 
-    // "custom/mail": {
-    //     "format": "{} ",
-    //     "exec": "$HOME/.config/waybar/scripts/checkgmail.py",
-    //     "interval": 120,
-    //     "on-click": "google-chrome-stable https://mail.google.com/mail/u/0/#inbox ; pkill -SIGRTMIN+9 waybar",
-    //     "signal": 9,
-    //     "tooltip": false
-    // },
-
     "clock": {
-        // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%a, %d %b, %I:%M %p}"
     },
 
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
         "reverse-scrolling": 1,
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
@@ -114,6 +115,27 @@
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected "
     },
+
+    // "custom/notification": {
+    //   "tooltip": false,
+    //   "format": "{} {icon}",
+    //   "format-icons": {
+    //     "notification": "<span foreground='red'><sup></sup></span>",
+    //     "none": "",
+    //     "dnd-notification": "<span foreground='red'><sup></sup></span>",
+    //     "dnd-none": "",
+    //     "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+    //     "inhibited-none": "",
+    //     "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+    //     "dnd-inhibited-none": ""
+    //   },
+    //   "return-type": "json",
+    //   "exec-if": "which swaync-client",
+    //   "exec": "swaync-client -swb",
+    //   "on-click": "swaync-client -t -sw",
+    //   "on-click-right": "swaync-client -d -sw",
+    //   "escape": true
+    // },
 
     "backlight": {
         "device": "intel_backlight",

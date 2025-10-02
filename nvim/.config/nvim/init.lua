@@ -84,9 +84,15 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup("plugins")
 
+-- CUSTOM PLUGINS
+
+-- Save Wonder
 vim.api.nvim_create_user_command("SaveWonder", function()
   require("save_wonder").save_wonder()
 end, {})
+
+-- Power Mode
+
 
 vim.api.nvim_create_autocmd("BufWritePost", {
   command = [[ SaveWonder ]]

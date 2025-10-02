@@ -19,6 +19,9 @@ export GRIM_DEFAULT_DIR="$HOME/Pictures/Screenshots"
 # Default Editor
 export EDITOR="nvim"
 
+# Eclipse Enterprise
+alias eclipse="~/Downloads/eclipse-jee-2022-06-R-linux-gtk-x86_64/eclipse/eclipse"
+
 # Alias nv for NeoVim
 alias nv="nvim"
 
@@ -47,7 +50,8 @@ alias rofi-powermenu="/home/aether/.config/rofi/powermenu/type-6/powermenu.sh"
 # Startup message display
 if [[ -z $TMUX ]]; then
   # toilet "obscura" -f pagga
-  fortune | cowthink
+  # fortune | cowthink
+  kotofetch
   echo
 fi
 
@@ -78,5 +82,6 @@ alias glint="source ~/Coding/python/glint/glint/bin/activate && python3 ~/Coding
 bindkey -s '^N' 'source ~/.scripts/zsh/nvim_opener.sh\n'
 
 
+eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 . "/home/aether/.deno/env"
