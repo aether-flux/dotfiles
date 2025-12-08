@@ -43,6 +43,12 @@ return {
             },
             javascript = {
               {formatCommand = "prettier --stdin-filepath ${INPUT}", formatStdin = true}
+            },
+            c = {
+              {formatCommand = "clang-format --assume-filename=${INPUT}", formatStdin = true}
+            },
+            cpp = {
+              {formatCommand = "clang-format --assume-filename=${INPUT}", formatStdin = true}
             }
           }
         }
@@ -59,6 +65,12 @@ return {
         capabilities = capabilities
       })
       lspconf.rust_analyzer.setup({});
+      lspconf.clangd.setup({
+        capabilities = capabilities,
+        cmd = { "clangd", "--background-index", "--clang-tidy" },
+        filetypes = { "c", "cpp", "objc", "objcpp" },
+        root_dir = lspconf.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+      })
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
       vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})

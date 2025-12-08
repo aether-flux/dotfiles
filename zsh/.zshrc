@@ -41,6 +41,7 @@ alias scopen="scrcpy --no-audio"
 alias lsn="judge exa --icons -la"
 alias pokemon-icat="~/.cache/pokemon-icat/pokemon-icat"
 alias insomnia="~/Downloads/Insomnia.Core-11.2.0.AppImage"
+alias tlauncher="java -jar ~/Downloads/TLauncher.v16/TLauncher.jar"
 
 # Rofi Aliases
 alias rofi-launch="/home/aether/.config/rofi/launchers/type-6/launcher.sh"
@@ -51,7 +52,7 @@ alias rofi-powermenu="/home/aether/.config/rofi/powermenu/type-6/powermenu.sh"
 if [[ -z $TMUX ]]; then
   # toilet "obscura" -f pagga
   # fortune | cowthink
-  kotofetch
+  kotofetch --centered false
   echo
 fi
 
