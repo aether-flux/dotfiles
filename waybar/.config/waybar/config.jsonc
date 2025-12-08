@@ -24,7 +24,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "hyprland/window", "keyboard-state", "custom/pacman"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "backlight", "network", "custom/notification", "battery"],
+    "modules-right": ["pulseaudio", "custom/dndtoggle", "backlight", "network", "custom/notification", "battery"],
 
 
     //***************************
@@ -74,7 +74,7 @@
         "interval": 3600,                     			// every hour
         "exec": "(checkupdates;pacman -Qm | aur vercmp) | wc -l",	// # of updates
         "exec-if": "exit 0",                  			// always run; consider advanced run conditions
-        "on-click": "kitty sh -c 'pacman -Syu && yay -Syu; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar", // update system
+        "on-click": "kitty sh -c 'sudo pacman -Syu && yay -Syu; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar", // update system
         "signal": 8,
         "tooltip": false
     },
@@ -136,6 +136,13 @@
     //   "on-click-right": "swaync-client -d -sw",
     //   "escape": true
     // },
+
+    "custom/dndtoggle": {
+      "exec": "~/.scripts/waybar/dunst_dnd.sh",
+      "interval": 2,
+      "return-type": "json",
+      "on-click": "dunstctl set-paused toggle"
+    },
 
     "backlight": {
         "device": "intel_backlight",

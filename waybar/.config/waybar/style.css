@@ -122,6 +122,25 @@ window#waybar.hidden {
 /*     background: #2b3339; */
 /* } */
 
+#custom-dndtoggle {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 6px;
+    transition: none;
+    color: @foreground;
+    background: @background;
+}
+
+#custom-dunst_dnd.dnd-on {
+  /* background-color: @color4; */
+  background-color: #2b3339;
+}
+
+#custom-dunst_dnd.dnd-off {
+  background-color: @background;
+}
+
 #backlight {
     margin-right: 8px;
     padding-left: 16px;
