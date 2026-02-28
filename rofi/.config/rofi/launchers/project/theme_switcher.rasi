@@ -59,7 +59,7 @@ entry {
     text-color: #d3c6aa;
     background-color: transparent;
     cursor: text;
-    placeholder: "Kigusai Central Pagoda...";
+    placeholder: "Select Theme...";
     placeholder-color: #859289;
 }
 

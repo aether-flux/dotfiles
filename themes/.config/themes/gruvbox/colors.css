@@ -1,0 +1,21 @@
+@define-color bg_primary #1d2021;
+@define-color bg_secondary #282828;
+@define-color bg_overlay #32302f;
+
+@define-color fg_primary #fbf1c7;
+@define-color fg_secondary #ebdbb2;
+@define-color fg_bright #fbf1c7;
+
+@define-color accent_primary #d79921;
+@define-color accent_secondary #d65d0e;
+@define-color accent_soft #98971a;
+
+@define-color success_color #b8bb26;
+@define-color error_color #fb4934;
+@define-color warning_color #fabd2f;
+
+@define-color border_active_primary #d79921;
+@define-color border_active_secondary #d65d0e;
+@define-color border_inactive #7c6f64;
+
+@define-color shadow_color #32302f;

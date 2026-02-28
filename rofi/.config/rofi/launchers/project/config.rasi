@@ -22,7 +22,7 @@ configuration {
 * {
     font: "GeistMono Nerd Font 12";
     text-color: #d3c6aa;
-    background-color: rgba(43, 51, 57, 0.6);  // Everforest bg0 with transparency
+    background-color: rgba(43, 51, 57, 1);  // Everforest bg0 with transparency
     border: 0px;
     padding: 0;
     spacing: 0;
@@ -32,15 +32,15 @@ configuration {
 window {
     transparency: "real";
     blur: true;
-    padding: 20px;
-    width: 600px;
+    padding: 10px;
+    width: 500px;
     height: 515px;
     border-radius: 20px;
 }
 
 /*****----- Layout -----*****/
 mainbox {
-    padding: 10px;
+    padding: 5px;
     children: [inputbar, listview];
     spacing: 15px;
     border-radius: 15px;
@@ -69,12 +69,12 @@ listview {
     scrollbar: false;
     padding: 0;
     border-radius: 10px;
-    spacing: 6px;
+    spacing: 3px;
 }
 
 /*****----- Elements -----*****/
 element {
-    padding: 12px;
+    padding: 10px;
     border-radius: 6px;
     background-color: transparent;
     horizontal-align: 0.5;

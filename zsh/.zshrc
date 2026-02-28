@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# OPTS
+setopt NO_NOTIFY
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -37,11 +40,19 @@ alias gop="~/.scripts/zsh/gh_open.sh"
 # Scrcpy Alias
 alias scopen="scrcpy --no-audio"
 
+# LAMPP Alias
+alias lampp="sudo /opt/lampp/lampp"
+
+# Git alias
+alias gic="git init && git add . && git commit -m 'feat: project setup' && git branch -M main"
+alias gp="git push -u origin main"
+
 # Alias
-alias lsn="judge exa --icons -la"
+alias ls="judge exa --icons -la"
 alias pokemon-icat="~/.cache/pokemon-icat/pokemon-icat"
 alias insomnia="~/Downloads/Insomnia.Core-11.2.0.AppImage"
 alias tlauncher="java -jar ~/Downloads/TLauncher.v16/TLauncher.jar"
+alias discord="~/Downloads/Discord/Discord"
 
 # Rofi Aliases
 alias rofi-launch="/home/aether/.config/rofi/launchers/type-6/launcher.sh"
@@ -55,6 +66,10 @@ if [[ -z $TMUX ]]; then
   kotofetch --centered false
   echo
 fi
+
+# Start ssh-agent
+eval "$(ssh-agent -s)" >/dev/null
+ssh-add ~/.ssh/id_ed25519 ~/.ssh/id_ed25519_devsoc >/dev/null 2>&1
 
 # Z Shell Extensions
 source ~/.zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -86,3 +101,12 @@ bindkey -s '^N' 'source ~/.scripts/zsh/nvim_opener.sh\n'
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 . "/home/aether/.deno/env"
+
+# Terminal sounds
+precmd() {
+    if [[ $? -ne 0 ]]; then
+        paplay ~/Documents/Sounds/faah.mp3 --volume=32768 >/dev/null 2>&1 &!
+    else
+        paplay ~/Documents/Sounds/mouse-click.mp3 --volume=32768 >/dev/null 2>&1 &!
+    fi
+}

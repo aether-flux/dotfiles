@@ -18,7 +18,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require('mason-lspconfig').setup({
-        ensure_installed = {'efm', 'lua_ls', 'bashls', 'clangd', 'cssls', 'graphql', 'html', 'emmet_ls', 'eslint', 'ts_ls', 'jsonls', 'rust_analyzer', 'grammarly', 'prismals', 'pylsp', 'sqlls'}
+        ensure_installed = {'efm', 'lua_ls', 'bashls', 'clangd', 'cssls', 'graphql', 'html', 'emmet_ls', 'eslint', 'ts_ls', 'jsonls', 'rust_analyzer', 'grammarly', 'prismals', 'pyright', 'sqlls'}
       })
     end
   },
@@ -70,6 +70,9 @@ return {
         cmd = { "clangd", "--background-index", "--clang-tidy" },
         filetypes = { "c", "cpp", "objc", "objcpp" },
         root_dir = lspconf.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+      })
+      lspconf.pyright.setup({
+        capabilities = capabilities,
       })
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})

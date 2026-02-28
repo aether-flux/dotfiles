@@ -152,11 +152,11 @@ add-zsh-hook precmd fix_cursor_shape
   typeset -g POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
   # Define your soft brown/beige palette
-  typeset -g SOFT_BROWN=180  # warm beige
-  typeset -g DARK_BROWN=94   # earthy brown
-  typeset -g SAND=187        # pale sandy
-  typeset -g COAL=238        # dark muted gray
-  typeset -g CHALK=255       # soft white
+  typeset -g SOFT_BROWN=180 # warm beige
+  typeset -g DARK_BROWN=94 # earthy brown
+  typeset -g SAND=187 # pale sandy
+  typeset -g COAL=238 # dark muted gray
+  typeset -g CHALK=255 # soft white
 
   # Connect left prompt lines with these symbols. You'll probably want to use the same color
   # as POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_FOREGROUND below.
@@ -220,7 +220,7 @@ add-zsh-hook precmd fix_cursor_shape
   # Transparent background.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_BACKGROUND=
   typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=$DARK_BROWN
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=124  # softer red
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=red
   # Default prompt symbol.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='❯'
   # Prompt symbol in command vi mode.

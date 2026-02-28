@@ -1,4 +1,4 @@
-@import url("/home/aether/.cache/wal/colors-waybar.css");
+@import url("/home/aether/.config/themes/current/colors.css");
 
 * {
     border: none;
@@ -21,23 +21,23 @@ window#waybar.hidden {
     margin-right: 8px;
     margin-top: 0px;
     /* background-color: #2b3339; */
-    background-color: @background;
+    background-color: @bg_primary;
 }
 
 #workspaces button {
     background: transparent;
     padding: 5px;
     font-size: 18px;
-    color: @foreground;
+    color: @fg_primary;
 }
 
 #workspaces button:hover {
-    background: @color8;
+    background: @fg_secondary;
     border-radius: 4px;
 }
 
 #workspaces button.active {
-  color: @color6;
+  color: @accent_secondary;
 }
 
 #window {
@@ -46,8 +46,8 @@ window#waybar.hidden {
     margin-right: 8px;
     border-radius: 6px;
     transition: none;
-    color: @foreground;
-    background: @background;
+    color: @fg_primary;
+    background: @bg_primary;
 }
 
 #keyboard-state {
@@ -56,8 +56,8 @@ window#waybar.hidden {
     margin-right: 8px;
     border-radius: 6px;
     transition: none;
-    color: @foreground;
-    background: @background;
+    color: @fg_primary;
+    background: @bg_primary;
 }
 
 #custom-pacman {
@@ -65,8 +65,8 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 6px;
     transition: none;
-    color: @foreground;
-    background: @background;
+    color: @fg_primary;
+    background: @bg_primary;
 }
 
 /* #custom-mail { */
@@ -83,8 +83,8 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 6px;
     transition: none;
-    color: @foreground;
-    background: @background;
+    color: @fg_primary;
+    background: @bg_primary;
 }
 
 #pulseaudio {
@@ -93,13 +93,13 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 6px;
     transition: none;
-    color: @foreground;
-    background: @background;
+    color: @fg_primary;
+    background: @bg_primary;
 }
 
 #pulseaudio.muted {
-    background-color: @color4;
-    color: @foreground;
+    background-color: @accent_primary;
+    color: @fg_primary;
 }
 
 #network {
@@ -108,8 +108,8 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 6px;
     transition: none;
-    color: @foreground;
-    background: @background;
+    color: @fg_primary;
+    background: @bg_primary;
 }
 
 /* #custom-notification { */
@@ -128,17 +128,17 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 6px;
     transition: none;
-    color: @foreground;
-    background: @background;
+    color: @fg_primary;
+    background: @bg_primary;
 }
 
 #custom-dunst_dnd.dnd-on {
   /* background-color: @color4; */
-  background-color: #2b3339;
+  background-color: @bg_primary;
 }
 
 #custom-dunst_dnd.dnd-off {
-  background-color: @background;
+  background-color: @bg_primaru;
 }
 
 #backlight {
@@ -147,8 +147,8 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 6px;
     transition: none;
-    color: @foreground;
-    background: @background;
+    color: @fg_primary;
+    background: @bg_primary;
 }
 
 #battery {
@@ -157,22 +157,22 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 6px;
     transition: none;
-    color: @foreground;
-    background: @background;
+    color: @fg_primary;
+    background: @bg_primary;
 }
 
 #battery.charging {
-    color: @color1;
-    background-color: #a7c080;
+    color: @bg_primary;
+    background-color: @accent_soft;
 }
 
 #battery.warning:not(.charging) {
-    background-color: #dbbc7f;
+    background-color: @warning_color;
     color: black;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #e67e80;
+    background-color: @error_color;
     color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -187,7 +187,7 @@ window#waybar.hidden {
     border-radius: 6px;
     transition: none;
     color: #ffffff;
-    background: @background;
+    background: @bg_primary;
 }
 
 @keyframes blink {

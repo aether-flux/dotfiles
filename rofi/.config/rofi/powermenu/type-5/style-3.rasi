@@ -26,10 +26,10 @@ configuration {
 
 /* MAIN WINDOW */
 window {
-    background-color: rgba(43, 51, 57, 0.9);  // Everforest bg0 w/ opacity
+    background-color: rgba(43, 51, 57, 1);  // Everforest bg0 w/ opacity
     border-radius: 12px;
     padding: 20px;
-    width: 700px;
+    width: 500px;
     blur: true;
     transparency: "real";
     spacing: 30px;
