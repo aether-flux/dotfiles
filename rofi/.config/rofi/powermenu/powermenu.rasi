@@ -1,0 +1,73 @@
+@import "~/.config/themes/current/colors.rasi"
+
+configuration {
+    show-icons: false;
+}
+
+* {
+    font:             "GeistMono Nerd Font 12";
+    text-color:       @fg-primary;
+    background-color: @bg-primary;
+}
+
+window {
+    background-color: @bg-primary;
+    border-radius:    12px;
+    padding:          20px;
+    width:            500px;
+    blur:             true;
+    transparency:     "real";
+    spacing:          30px;
+    children:         [message, listview];
+}
+
+listview {
+    columns:       3;
+    lines:         2;
+    dynamic:       true;
+    fixed-height:  true;
+    fixed-columns: true;
+    spacing:       15px;
+    background-color: transparent;
+    scrollbar:     false;
+    margin-top:    30px;
+}
+
+element {
+    padding:          20px 12px;
+    border-radius:    10px;
+    background-color: @bg-element;
+    text-color:       @fg-primary;
+    horizontal-align: 0.5;
+    vertical-align:   0.5;
+}
+
+element selected {
+    background-color: @bg-selected;
+    text-color:       @fg-primary;
+}
+
+element-text {
+    font:             "GeistMono Nerd Font 14";
+    background-color: transparent;
+    text-color:       inherit;
+    horizontal-align: 0.5;
+    vertical-align:   0.5;
+}
+
+message {
+    enabled:          true;
+    margin:           10px 0px 0px 0px;
+    padding:          8px 12px;
+    border-radius:    8px;
+    background-color: @bg-message;
+    text-color:       @fg-message;
+    font:             "GeistMono Nerd Font 10";
+}
+
+textbox {
+    horizontal-align: 0.5;
+    vertical-align:   0.5;
+    background-color: transparent;
+    text-color:       inherit;
+}

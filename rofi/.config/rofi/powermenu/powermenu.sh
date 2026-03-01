@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ####################################
 ###
 ### ██████╗  ██████╗ ███████╗██╗
@@ -10,9 +12,6 @@
 ######Rofi Config for AetherOS ######
 ####################################
 
-# Current Theme
-dir="$HOME/.config/rofi/powermenu/type-5"
-theme='style-3'
 
 # CMDs
 lastlogin="`last $USER | head -n1 | tr -s ' ' | cut -d' ' -f5,6,7`"
@@ -34,7 +33,7 @@ rofi_cmd() {
   rofi -dmenu \
     -p " $USER@$host" \
     -mesg " Last Login: $lastlogin |  Uptime: $uptime" \
-    -theme "$ROFI_THEME"
+    -theme "$HOME/.config/rofi/powermenu/powermenu.rasi"
 }
 
 # Confirmation CMD
@@ -47,7 +46,7 @@ confirm_cmd() {
     -dmenu \
     -p 'Confirmation' \
     -mesg 'Are you Sure?' \
-    -theme "$ROFI_THEME"
+    -theme "$HOME/.config/rofi/powermenu/powermenu.rasi"
 }
 
 # Ask for confirmation

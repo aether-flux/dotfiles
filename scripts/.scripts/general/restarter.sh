@@ -4,7 +4,9 @@ component=$(printf "%s\n" \
   "dunst" \
   "tmux" \
   "waybar" \
-  "hyprland" | rofi -dmenu -i -p "Restart..." -theme ~/.config/rofi/launchers/project/restart.rasi)
+  "hyprland" | rofi -dmenu \
+     -theme ~/.config/rofi/appLauncher/project/base.rasi \
+     -theme-str '* { placeholder-text: "Restart..."; }')
 
 case $component in
   "dunst")

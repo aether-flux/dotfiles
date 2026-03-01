@@ -1,0 +1,15 @@
+* {
+    bg-primary:   rgba(43, 51, 57, 1);
+    bg-secondary: rgba(67, 76, 84, 0.8);
+    bg-selected:  rgba(167, 192, 128, 0.2);
+    bg-element:   #3c4841;
+    bg-message:   rgba(60, 72, 65, 0.6);
+    fg-primary:   #d3c6aa;
+    fg-muted:     #859289;
+    fg-message:   #9da9a0;
+    border-radius-window: 20px;
+    border-radius-main:   15px;
+    border-radius-input:  7px;
+    border-radius-list:   10px;
+    border-radius-elem:   4px;
+}

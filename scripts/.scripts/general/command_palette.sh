@@ -7,7 +7,9 @@ choice=$(printf "%s\n" \
   "Open Scrolls" \
   "Screenshot (fullscreen)" \
   "Screenshot (selection)" \
-  "Restart" | rofi -dmenu -i -p "Command Palette" -theme ~/.config/rofi/launchers/project/command_palette.rasi)
+  "Restart" | rofi -dmenu \
+     -theme ~/.config/rofi/appLauncher/project/base.rasi \
+     -theme-str '* { placeholder-text: "Command Palette..."; }')
 
 case $choice in
   "Screenshot (fullscreen)")
@@ -19,7 +21,7 @@ case $choice in
   "Wisdom of the Silver Age")
     ~/.scripts/general/msgpopup.sh ;;
   "Open Artefacts")
-    ~/.config/rofi/launchers/type-7/launcher.sh ;;
+    ~/.config/rofi/appLauncher/appLauncher.sh ;;
   "Open Scrolls")
     ~/.scripts/general/opener.sh ;;
   "Enter a Pagoda")

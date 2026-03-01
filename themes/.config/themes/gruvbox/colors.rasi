@@ -1,0 +1,15 @@
+* {
+    bg-primary:   #1d2021;
+    bg-secondary: #32302f;
+    bg-selected:  #d79921;
+    bg-element:   #282828;
+    bg-message:   #32302f;
+    fg-primary:   #fbf1c7;
+    fg-muted:     #ebdbb2;
+    fg-message:   #7c6f64;
+    border-radius-window: 20px;
+    border-radius-main:   15px;
+    border-radius-input:  7px;
+    border-radius-list:   10px;
+    border-radius-elem:   4px;
+}

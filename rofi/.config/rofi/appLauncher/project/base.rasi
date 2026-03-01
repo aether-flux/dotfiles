@@ -1,0 +1,80 @@
+@import "~/.config/themes/current/colors.rasi"
+
+configuration {
+    drun-display-format: "{name}";
+}
+
+* {
+    font:             "GeistMono Nerd Font 12";
+    text-color:       @fg-primary;
+    background-color: @bg-primary;
+    border:           0px;
+    padding:          0;
+    spacing:          0;
+
+    /* fallback defaults — overridden per-launch via -theme-str */
+    placeholder-text: "Search...";
+}
+
+window {
+    transparency:  "real";
+    blur:          true;
+    padding:       10px;
+    width:         500px;
+    border-radius: @border-radius-window;
+}
+
+mainbox {
+    padding:       5px;
+    children:      [inputbar, listview];
+    spacing:       15px;
+    border-radius: @border-radius-main;
+}
+
+inputbar {
+    children:         [entry];
+    background-color: @bg-secondary;
+    border-radius:    @border-radius-input;
+    padding:          6px 12px;
+}
+
+entry {
+    expand:           true;
+    text-color:       @fg-primary;
+    background-color: transparent;
+    cursor:           text;
+    placeholder:      @placeholder-text;
+    placeholder-color: @fg-muted;
+}
+
+listview {
+    lines:        12;
+    dynamic:      true;
+    fixed-height: false;
+    scrollbar:    false;
+    padding:      0;
+    border-radius: @border-radius-list;
+    spacing:      4px;
+}
+
+element {
+    padding:          10px;
+    border-radius:    @border-radius-elem;
+    background-color: transparent;
+    horizontal-align: 0.5;
+}
+
+element-icon {
+    size: 0;
+}
+
+element-text {
+    background-color: transparent;
+    vertical-align:   0.5;
+    text-color:       @fg-primary;
+}
+
+element selected {
+    background-color: @bg-selected;
+    text-color:       @fg-primary;
+}

@@ -1,10 +1,23 @@
 #!/bin/bash
 
+# choice=$(printf "%s\n" \
+#   "Everforest" \
+#   "Nord" \
+#   "Gruvbox" \
+#   "Catppuccin" | rofi -dmenu -i -p "Switch Theme" -theme ~/.config/rofi/launchers/project/theme_switcher.rasi)
+
 choice=$(printf "%s\n" \
   "Everforest" \
   "Nord" \
   "Gruvbox" \
-  "Catppuccin" | rofi -dmenu -i -p "Switch Theme" -theme ~/.config/rofi/launchers/project/theme_switcher.rasi)
+  "Scarlet" \
+  "Catppuccin" | rofi -dmenu \
+     -theme ~/.config/rofi/appLauncher/project/base.rasi \
+     -theme-str '* { placeholder-text: "Select Theme..."; }')
+
+# rofi -show drun \
+#      -theme ~/.config/rofi/base.rasi \
+#      -theme-str '* { placeholder-text: "Select Theme..."; }'
 
 case $choice in
   "Everforest")
@@ -31,6 +44,13 @@ case $choice in
   "Catppuccin")
     cp -r $HOME/.config/themes/catppuccin/* $HOME/.config/themes/current/
     awww img $HOME/Pictures/Wallpapers/catppuccin_1.jpg --transition-type random & disown
+    hyprctl reload
+    killall waybar
+    waybar & disown
+    ;;
+  "Scarlet")
+    cp -r $HOME/.config/themes/scarlet/* $HOME/.config/themes/current/
+    awww img $HOME/Pictures/Wallpapers/scarlet_1.jpg --transition-type random & disown
     hyprctl reload
     killall waybar
     waybar & disown

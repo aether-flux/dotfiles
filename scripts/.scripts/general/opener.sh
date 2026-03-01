@@ -4,7 +4,9 @@ component=$(printf "%s\n" \
   "btop" \
   "Pipes" \
   "NeoFetch" \
-  "FastFetch" | rofi -dmenu -i -p "Run command" -theme ~/.config/rofi/launchers/project/opener.rasi)
+  "FastFetch" | rofi -dmenu \
+     -theme ~/.config/rofi/appLauncher/project/base.rasi \
+     -theme-str '* { placeholder-text: "Programs..."; }')
 
 case $component in
   "btop")
