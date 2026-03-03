@@ -13,7 +13,7 @@
     padding = 10
     horizontal_padding = 16
     text_icon_padding = 8
-    frame_color = "#2b3339"
+    frame_color = "{{DUNST_FRAME}}"
     separator_color = frame
     gap_size = 10
     sort = yes
@@ -28,7 +28,7 @@
     show_age_threshold = 60
     stack_duplicates = true
     hide_duplicate_count = false
-    corner_radius = 14
+    corner_radius = {{BORDER_RADIUS}}
     corners = all
     progress_bar = true
     progress_bar_height = 4
@@ -47,20 +47,20 @@
     mouse_right_click = do_action
 
 [urgency_low]
-    background = "#2b3339cc"
-    foreground = "#d3c6aa"
+    background = "{{DUNST_LOW_BG}}"
+    foreground = "{{DUNST_LOW_FG}}"
     timeout = 5
     default_icon = dialog-information
 
 [urgency_normal]
-    background = "#d3c6aacc"
-    foreground = "#2b333988"
+    background = "{{DUNST_NORMAL_BG}}"
+    foreground = "{{DUNST_NORMAL_FG}}"
     timeout = 6
     default_icon = dialog-information
 
 [urgency_critical]
-    background = "#e67e80cc"
-    foreground = "#d3c6aa"
-    frame_color = "#e67e80"
+    background = "{{DUNST_CRITICAL_BG}}"
+    foreground = "{{DUNST_CRITICAL_FG}}"
+    frame_color = "{{DUNST_CRITICAL_FRAME}}"
     timeout = 0
     default_icon = dialog-warning

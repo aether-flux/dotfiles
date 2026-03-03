@@ -1,12 +1,12 @@
 * {
-    bg-primary:   #0A0A0A;
-    bg-secondary: #151515;
-    bg-selected:  #ABABAB;
-    bg-element:   #111111;
-    bg-message:   #111111;
-    fg-primary:   #F2F2F2;
-    fg-muted:     #D9D9D9;
-    fg-message:   #F2F2F2;
+    bg-primary:   rgba(43, 51, 57, 1);
+    bg-secondary: rgba(67, 76, 84, 0.8);
+    bg-selected:  rgba(167, 192, 128, 0.2);
+    bg-element:   #3c4841;
+    bg-message:   rgba(60, 72, 65, 0.6);
+    fg-primary:   #d3c6aa;
+    fg-muted:     #859289;
+    fg-message:   #9da9a0;
     border-radius-window: 20px;
     border-radius-main:   15px;
     border-radius-input:  7px;
