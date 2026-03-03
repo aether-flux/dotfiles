@@ -14,7 +14,7 @@
 
 project_list=$(find ~/Projects -maxdepth 1 -mindepth 1 -type d -exec basename {} \;)
 
-selected=$(echo "$project_list" | rofi -dmenu -i -p "Launch project: " -theme ~/.config/rofi/launchers/project/config.rasi)
+selected=$(echo "$project_list" | rofi -dmenu -i -p "Launch project: " -theme ~/.config/rofi/appLauncher/project/base.rasi)
 
 if [[ -n "$selected" ]]; then
   fullpath="$HOME/Projects/$selected"
