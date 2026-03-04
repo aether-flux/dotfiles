@@ -44,6 +44,7 @@ choice=$(printf "%s\n" \
   "Gruvbox" \
   "E-Ink" \
   "Scarlet" \
+  "Themename" \
   "Catppuccin" | rofi -dmenu \
      -theme ~/.config/rofi/appLauncher/project/base.rasi \
      -theme-str '* { placeholder-text: "Select Theme..."; }')
@@ -104,6 +105,16 @@ case $choice in
     apply_dunst_theme
     dunstify "Switching theme: $choice"
     awww img $HOME/Pictures/Wallpapers/scarlet_1.jpg --transition-type center --transition-bezier .31,.08,.3,.99 --transition-duration 2 & disown
+    paplay ~/Documents/Sounds/theme_switch.mp3 --volume=32768 &
+    hyprctl reload
+    killall waybar
+    waybar & disown
+    ;;
+  "Horizon")
+    cp -r $HOME/.config/themes/horizon/* $HOME/.config/themes/current/
+    apply_dunst_theme
+    dunstify "Switching theme: $choice"
+    awww img $HOME/Pictures/Wallpapers/horizon_1.jpg --transition-type center --transition-bezier .31,.08,.3,.99 --transition-duration 2 & disown
     paplay ~/Documents/Sounds/theme_switch.mp3 --volume=32768 &
     hyprctl reload
     killall waybar
