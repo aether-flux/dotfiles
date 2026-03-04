@@ -44,7 +44,7 @@ choice=$(printf "%s\n" \
   "Gruvbox" \
   "E-Ink" \
   "Scarlet" \
-  "Themename" \
+  "Horizon" \
   "Catppuccin" | rofi -dmenu \
      -theme ~/.config/rofi/appLauncher/project/base.rasi \
      -theme-str '* { placeholder-text: "Select Theme..."; }')
