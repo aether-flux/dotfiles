@@ -37,7 +37,7 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
-  color: @accent_secondary;
+  color: @accent_primary;
 }
 
 #window {
@@ -98,7 +98,7 @@ window#waybar.hidden {
 }
 
 #pulseaudio.muted {
-    background-color: @accent_primary;
+    background-color: @accent_secondary;
     color: @fg_primary;
 }
 

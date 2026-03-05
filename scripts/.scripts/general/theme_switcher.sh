@@ -45,6 +45,7 @@ choice=$(printf "%s\n" \
   "E-Ink" \
   "Scarlet" \
   "Horizon" \
+  "The Oldest Dream" \
   "Catppuccin" | rofi -dmenu \
      -theme ~/.config/rofi/appLauncher/project/base.rasi \
      -theme-str '* { placeholder-text: "Select Theme..."; }')
@@ -115,6 +116,16 @@ case $choice in
     apply_dunst_theme
     dunstify "Switching theme: $choice"
     awww img $HOME/Pictures/Wallpapers/horizon_1.jpg --transition-type center --transition-bezier .31,.08,.3,.99 --transition-duration 2 & disown
+    paplay ~/Documents/Sounds/theme_switch.mp3 --volume=32768 &
+    hyprctl reload
+    killall waybar
+    waybar & disown
+    ;;
+  "The Oldest Dream")
+    cp -r $HOME/.config/themes/the_oldest_dream/* $HOME/.config/themes/current/
+    apply_dunst_theme
+    dunstify "Switching theme: $choice"
+    awww img $HOME/Pictures/Wallpapers/the_oldest_dream_1.jpg --transition-type center --transition-bezier .31,.08,.3,.99 --transition-duration 2 & disown
     paplay ~/Documents/Sounds/theme_switch.mp3 --volume=32768 &
     hyprctl reload
     killall waybar
