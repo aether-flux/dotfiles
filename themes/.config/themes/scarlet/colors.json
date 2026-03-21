@@ -1,0 +1,23 @@
+{
+  "bg_primary": "#020106",
+  "bg_secondary": "#030E24",
+  "bg_overlay": "#030E24",
+
+  "fg_primary": "#F8F4F1",
+  "fg_secondary": "#EFE7E4",
+  "fg_bright": "#F8F4F1",
+
+  "accent_primary": "#C15142",
+  "accent_secondary": "#424DC1",
+  "accent_soft": "#D86E5F",
+
+  "success_color": "#5BC142",
+  "error_color": "#C15142",
+  "warning_color": "#E0DB4B",
+
+  "border_active_primary": "#C15142",
+  "border_active_secondary": "#424DC1",
+  "border_inactive": "#1A1725",
+
+  "shadow_color": "#020106",
+"

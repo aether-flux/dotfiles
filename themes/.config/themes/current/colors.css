@@ -1,22 +1,21 @@
-@define-color bg_primary #181412;
-@define-color bg_secondary #1E1613;
-@define-color bg_overlay #382C30;
+@define-color bg_primary #0F0F0D;
+@define-color bg_secondary #141A10;
+@define-color bg_overlay #262B23;
 
-@define-color fg_primary #DDDEE8;
-@define-color fg_secondary #382C30;
-@define-color fg_bright #DDDEE8;
+@define-color fg_primary #ECE8DD;
+@define-color fg_secondary #737976;
+@define-color fg_bright #ECE8DD;
 
-@define-color accent_primary #F5B777;
-@define-color accent_secondary #E09066;
-/* @define-color accent_soft #73848F; */
-@define-color accent_soft #A57C5E;
+@define-color accent_primary #9B945E;
+@define-color accent_secondary #A79D47;
+@define-color accent_soft #AEBABD;
 
-@define-color success_color #4FA542;
-@define-color error_color #A54242;
-@define-color warning_color #D1DA53;
+@define-color success_color #77CB3F;
+@define-color error_color #DF4B4B;
+@define-color warning_color #DFDC41;
 
-@define-color border_active_primary #E09066;
-@define-color border_active_secondary #A57C5E;
-@define-color border_inactive #424D54;
+@define-color border_active_primary #A79D47;
+@define-color border_active_secondary #9B945E;
+@define-color border_inactive #AEBABD;
 
-@define-color shadow_color #382C30;
+@define-color shadow_color #262B23;

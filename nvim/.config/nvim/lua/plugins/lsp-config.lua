@@ -18,7 +18,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require('mason-lspconfig').setup({
-        ensure_installed = {'efm', 'lua_ls', 'bashls', 'clangd', 'cssls', 'graphql', 'html', 'emmet_ls', 'eslint', 'ts_ls', 'jsonls', 'rust_analyzer', 'grammarly', 'prismals', 'pyright', 'sqlls'}
+        ensure_installed = {'efm', 'lua_ls', 'bashls', 'clangd', 'cssls', 'graphql', 'html', 'emmet_ls', 'eslint', 'ts_ls', 'jsonls', 'rust_analyzer', 'grammarly', 'prismals', 'pyright', 'sqlls', 'qmlls'}
       })
     end
   },
@@ -57,6 +57,17 @@ return {
       lspconf.emmet_ls.setup({
         filetypes = {"html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact"}
       })
+
+      -- lspconfig.qmlls.setup({
+      --   capabilities = capabilities,
+      --   on_attach = on_attach,
+      --   cmd = { "qmlls" },
+      --   filetypes = { "qml" },
+      --   single_file_support = true,
+      --   root_dir = function(fname)
+      --     return lspconf.util.find_git_ancestor(fname)
+      --   end,
+      -- })
 
       lspconf.lua_ls.setup({
         capabilities = capabilities

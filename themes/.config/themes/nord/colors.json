@@ -1,0 +1,23 @@
+{
+  "bg_primary": "#2e3440",
+  "bg_secondary": "#3b4252",
+  "bg_overlay": "#434c5e",
+
+  "fg_primary": "#d8dee9",
+  "fg_secondary": "#e5e9f0",
+  "fg_bright": "#eceff4",
+
+  "accent_primary": "#5e81ac",
+  "accent_secondary": "#b48ead",
+  "accent_soft": "#d08770",
+
+  "success_color": "#a3be8c",
+  "error_color": "#bf616a",
+  "warning_color": "#ebcb8b",
+
+  "border_active_primary": "#88c0d0",
+  "border_active_secondary": "#81a1c1",
+  "border_inactive": "#8fbcbb",
+
+  "shadow_color": "#4c566a"
+}

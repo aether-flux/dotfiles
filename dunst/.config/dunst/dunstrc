@@ -13,7 +13,7 @@
     padding = 10
     horizontal_padding = 16
     text_icon_padding = 8
-    frame_color = "#181412"
+    frame_color = "#0F0F0D"
     separator_color = frame
     gap_size = 10
     sort = yes
@@ -47,20 +47,20 @@
     mouse_right_click = do_action
 
 [urgency_low]
-    background = "#181412cc"
-    foreground = "#DFCECC"
+    background = "#0F0F0Dcc"
+    foreground = "#DAD3B9"
     timeout = 5
     default_icon = dialog-information
 
 [urgency_normal]
-    background = "#E09066cc"
-    foreground = "#18141288"
+    background = "#9B945Ecc"
+    foreground = "#0F0F0D88"
     timeout = 6
     default_icon = dialog-information
 
 [urgency_critical]
-    background = "#A54242cc"
-    foreground = "#DDDEE8"
-    frame_color = "#A54242"
+    background = "#9A3131cc"
+    foreground = "#ECE8DD"
+    frame_color = "#9A3131"
     timeout = 0
     default_icon = dialog-warning

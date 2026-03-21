@@ -1,12 +1,12 @@
 * {
-    bg-primary:   #181412;
-    bg-secondary: #382C30;
-    bg-selected:  #A57C5E;
-    bg-element:   #1E1613;
-    bg-message:   #1E1613;
-    fg-primary:   #DDDEE8;
-    fg-muted:     #DFCECC;
-    fg-message:   #DFCECC;
+    bg-primary:   #0F0F0D;
+    bg-secondary: #262B23;
+    bg-selected:  #9B945E;
+    bg-element:   #141A10;
+    bg-message:   #141A10;
+    fg-primary:   #ECE8DD;
+    fg-muted:     #DAD3B9;
+    fg-message:   #DAD3B9;
     border-radius-window: 20px;
     border-radius-main:   15px;
     border-radius-input:  7px;
